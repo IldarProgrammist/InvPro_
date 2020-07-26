@@ -32,7 +32,7 @@ class Person(models.Model):
     photo = models.ImageField( blank=True)
     depatName = models.ForeignKey(Department, models.CASCADE, verbose_name='Отдел')
     position = models.ForeignKey(Position,    models.CASCADE, verbose_name='Должность')
-
+    email = models.EmailField(verbose_name='Электронная почта', blank=True)
 
     def __str__(self):
         return self.firstName

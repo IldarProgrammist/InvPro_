@@ -5,7 +5,7 @@ from person.models import Person, Department, Position
 
 @admin.register(Person)
 class Person(admin.ModelAdmin):
-    list_display = ('firstName','lastName','fatherName', 'phone','depatName','position')
+    list_display = ('firstName','lastName','fatherName', 'phone','depatName','position','email')
 
 @admin.register(Department)
 class Depatment(admin.ModelAdmin):
