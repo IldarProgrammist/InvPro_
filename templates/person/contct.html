@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<div class="wraper">
+   {% block  header%}
+        {% include 'header.html' %}
+    {% endblock %}
+
+    {{% block content %}
+    <div class="container">
+
+    <div class="row">
+        <div class="col"></div>
+            <div class="col">
+                 <h3 class="header_contct">Телефоный справочник</h3>
+            </div>
+            <div class="col">
+                <nav class="navbar navbar-light  justify-content-between">
+                      <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                      </form>
+                </nav>
+            </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+        </div>
+        <div class="col-8">
+            <table class="table table-hover table-inverse">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Фамилия</th>
+                      <th>Имя</th>
+                      <th>Отчество</th>
+                      <th>Телефон</th>
+                    </tr>
+                  </thead>
+
+                    {% for person in persons %}
+                      <tbody>
+                        <tr>
+                          <th scope="row">{{ person.id }}</th>
+                          <td> {{ person.firstName }}</td>
+                          <td> {{ person.lastName }}</td>
+                          <td> {{ person.fatherName }}</td>
+                          <td>{{ person.phone }}</td>
+                        </tr>
+                      </tbody>
+                    {% endfor %}
+            </table>
+        </div>
+        <div class="col">
+        </div>
+      </div>
+    </div>
+    </div>
+    {% endblock %}
+
+        {% block footer %}
+            {% include 'footer.html' %}
+        {% endblock %}
+
+
+</div>
