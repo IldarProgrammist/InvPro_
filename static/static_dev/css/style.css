@@ -5,9 +5,12 @@
 
 .header_contct{
     color: #34ce57;
-    padding-top: 8px;
-}
+    margin: 18px;
 
+}
+.search{
+    margin: 20px;
+}
 footer{
 
 }

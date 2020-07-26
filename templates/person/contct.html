@@ -10,43 +10,65 @@
     <div class="container">
 
     <div class="row">
-        <div class="col"></div>
-            <div class="col">
-                 <h3 class="header_contct">Телефоный справочник</h3>
-            </div>
-            <div class="col">
-                <nav class="navbar navbar-light  justify-content-between">
-                      <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                      </form>
-                </nav>
-            </div>
+
+        <div class="col-6"><h3 class="header_contct">Информация о сотрудниках</h3></div>
     </div>
+
+
+            <div class="row">
+
+                    <div class="container">
+                          <div class="row">
+                            <div class="col"></div>
+                            <div class="col"></div>
+
+                              <div class="col">
+                                     <div class="search">
+                                         <form class="form-inline">
+                                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                     </form>
+                                     </div>
+                             </div>
+
+
+                          </div>
+
+
+                    </div>
+
+            </div>
+
+
+
+
 
     <div class="row">
         <div class="col">
         </div>
-        <div class="col-8">
+        <div class="col-10">
             <table class="table table-hover table-inverse">
                   <thead>
                     <tr>
-                      <th>ID</th>
+
                       <th>Фамилия</th>
                       <th>Имя</th>
                       <th>Отчество</th>
                       <th>Телефон</th>
+                        <th>Отдел</th>
+                        <th>Должность</th>
                     </tr>
                   </thead>
 
                     {% for person in persons %}
                       <tbody>
                         <tr>
-                          <th scope="row">{{ person.id }}</th>
-                          <td> {{ person.firstName }}</td>
+                            <td> {{ person.firstName }}</td>
                           <td> {{ person.lastName }}</td>
                           <td> {{ person.fatherName }}</td>
                           <td>{{ person.phone }}</td>
+                            <td>{{ person.depatName }}</td>
+                             <td>{{ person.position }}</td>
                         </tr>
                       </tbody>
                     {% endfor %}
