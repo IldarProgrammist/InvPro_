@@ -15,21 +15,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26545484-2ec6-4856-a768-8b565567f23e" name="Default" comment="Добавление главного приложения. Добавление приложения локация">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/eq/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/eq/admin.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/eq/apps.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/eq/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/eq/migrations/0002_auto_20200728_0949.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/eq/migrations/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/eq/models.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/eq/tests.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/eq/urls.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/eq/views.py" afterPath="" />
+    <list default="true" id="26545484-2ec6-4856-a768-8b565567f23e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InvPro/settings.py" afterPath="$PROJECT_DIR$/InvPro/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InvPro/urls.py" afterPath="$PROJECT_DIR$/InvPro/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/location/models.py" afterPath="$PROJECT_DIR$/location/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/products/admin.py" afterPath="$PROJECT_DIR$/products/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/products/models.py" afterPath="$PROJECT_DIR$/products/models.py" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,32 +30,7 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/products/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="42" column="71" lean-forward="false" selection-start-line="42" selection-start-column="71" selection-end-line="42" selection-end-column="71" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/products/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="72" lean-forward="false" selection-start-line="19" selection-start-column="72" selection-end-line="19" selection-end-column="72" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -84,6 +48,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -156,11 +123,6 @@
             <path>
               <item name="InvPro" type="b2602c69:ProjectViewProjectNode" />
               <item name="InvPro" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InvPro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InvPro" type="462c0819:PsiDirectoryNode" />
-              <item name="location" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="InvPro" type="b2602c69:ProjectViewProjectNode" />
@@ -342,7 +304,21 @@
       <option name="project" value="LOCAL" />
       <updated>1595921463221</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Создание модели Product">
+      <created>1595940374682</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1595940374683</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Создание модели Product">
+      <created>1595940406477</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1595940406477</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView">
@@ -410,7 +386,8 @@
     <MESSAGE value="Реализована кнопка поиска в телефоном справочнике" />
     <MESSAGE value="Создание приложения EQ и добавлени моделей" />
     <MESSAGE value="Добавление главного приложения. Добавление приложения локация" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавление главного приложения. Добавление приложения локация" />
+    <MESSAGE value="Создание модели Product" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создание модели Product" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -668,7 +645,7 @@
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="11" selection-end-column="42" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -683,18 +660,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/products/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="72" lean-forward="false" selection-start-line="19" selection-start-column="72" selection-end-line="19" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="269">
+          <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/products/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="42" column="71" lean-forward="false" selection-start-line="42" selection-start-column="71" selection-end-line="42" selection-end-column="71" />
+        <state relative-caret-position="969">
+          <caret line="57" column="45" lean-forward="false" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>

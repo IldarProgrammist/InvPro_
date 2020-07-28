@@ -54,7 +54,18 @@ class Products(models.Model):
 
 
 
+class Arm(models.Model):
+    nameArm = models.CharField(max_length=100, verbose_name='Имя рабочей станции')
+    serialNamber = models.ForeignKey(Products, on_delete=models.CASCADE, verbose_name='Серийный номер')
 
+
+    def __str__(self):
+        return self.nameArm
+
+
+    class Meta:
+        verbose_name ='Рабочая станция'
+        verbose_name_plural = 'Рабочие станции'
 
 
 
