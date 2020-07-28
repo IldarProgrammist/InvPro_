@@ -17,8 +17,6 @@
   <component name="ChangeListManager">
     <list default="true" id="26545484-2ec6-4856-a768-8b565567f23e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/products/admin.py" afterPath="$PROJECT_DIR$/products/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/products/models.py" afterPath="$PROJECT_DIR$/products/models.py" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -318,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595940406477</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Добавление модели для хранениея рабочих станций">
+      <created>1595941235680</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1595941235680</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView">
@@ -387,7 +392,8 @@
     <MESSAGE value="Создание приложения EQ и добавлени моделей" />
     <MESSAGE value="Добавление главного приложения. Добавление приложения локация" />
     <MESSAGE value="Создание модели Product" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создание модели Product" />
+    <MESSAGE value="Добавление модели для хранениея рабочих станций" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавление модели для хранениея рабочих станций" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
