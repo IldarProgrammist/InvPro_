@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<div class="wraper">
+   {% block  header%}
+        {% include 'header.html' %}
+    {% endblock %}
+
+    {{% block content %}
+                   {% for eq in eq %}
+                       {{ eq.modelName }}
+                    {% endfor %}
+            <h2>Test</h2>
+    {% endblock %}
+
+        {% block footer %}
+            {% include 'footer.html' %}
+        {% endblock %}
+
+</div>

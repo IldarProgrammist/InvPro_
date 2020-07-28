@@ -1,3 +1,13 @@
 from django.shortcuts import render
 
-# Create your views here.
+from eq.models import ModelsE
+
+
+def eqListView(request):
+
+    eq = ModelsE.objects.all()
+
+    context ={
+        'eq' : eq
+    }
+    return render(request, 'eq/eq.html', context)

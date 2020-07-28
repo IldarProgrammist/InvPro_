@@ -56,7 +56,7 @@
                     </tr>
                   </thead>
 
-                    {% for person in persons %}
+                    {% for person in persons.object_list %}
                       <tbody>
                         <tr>
                             <td> {{ person.firstName }}</td>
@@ -76,11 +76,34 @@
       </div>
     </div>
     </div>
+
+        <nav aria-label="...">
+              <ul class="pagination">
+                  {% for n in persons.paginator.page_range %}
+
+                      {% if persons.number == n  %}
+                            <li class="page-item active">
+                                <a class="page-link" href="?page={{ n }}">{{ n }} <span class="sr-only">(current)</span></a>
+                            </li>
+
+                      {% elif n >  persons.number|add:-3 and n < persons.number|add:3  %}
+                             <li class="page-item">
+                                 <a class="page-link" href="?page={{ n }}">{{ n }}</a>
+                             </li>
+
+                      {% endif %}
+                  {% endfor %}
+
+
+              </ul>
+
+        </nav>
+
     {% endblock %}
+
 
         {% block footer %}
             {% include 'footer.html' %}
         {% endblock %}
-
 
 </div>

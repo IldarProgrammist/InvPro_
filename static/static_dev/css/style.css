@@ -1,16 +1,28 @@
-.link_header{
-    color: #dee2e6;
-    font-size: 18px;
-}
 
 .header_contct{
-    color: #34ce57;
+    color: #007bff;
     margin: 18px;
 
 }
 .search{
     margin: 20px;
 }
+
+/*Начало нового стиля*/
+
+footer nav {
+	color: #666;
+	background: #222;
+	padding: 17px 0 18px 0;
+	border-top: 1px solid #000;
+}
+
+/*Конец нового стиля*/
+
+
+
+
 footer{
 
 }
+
