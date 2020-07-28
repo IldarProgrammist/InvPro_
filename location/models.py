@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Titul(models.Model):
     numberTitul = models.CharField(max_length=4, verbose_name='номер титула', unique=True )
     titulName = models.CharField(max_length=100, verbose_name='название титула', unique=True)
@@ -22,3 +23,11 @@ class Room(models.Model):
     class Meta:
         verbose_name = 'Кабинет'
         verbose_name_plural  = 'Кабинеты'
+
+
+
+
+
+
+
+
