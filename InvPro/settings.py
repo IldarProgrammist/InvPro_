@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'location',
     'status',
     'expendableMaterials',
+    'act',
 
 ]
 
