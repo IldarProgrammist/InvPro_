@@ -2,8 +2,7 @@ from django.db import models
 
 
 class Titul(models.Model):
-    numberTitul = models.CharField(max_length=4, verbose_name='номер титула', unique=True )
-    titulName = models.CharField(max_length=100, verbose_name='название титула', unique=True)
+    titulName = models.CharField(max_length=100, verbose_name='Название титула', unique=True)
 
     def __str__(self):
         return self.titulName
@@ -13,9 +12,11 @@ class Titul(models.Model):
         verbose_name_plural = 'Титулы'
 
 class Room(models.Model):
+    numberTitul = models.CharField(max_length=20, verbose_name='Номер титула')
+    titul = models.ForeignKey(Titul, on_delete=models.CASCADE, verbose_name='Нахвание титула')
     numberRoom = models.CharField(max_length=10, verbose_name='Номер кабинета', unique=True)
-    titul = models.ForeignKey(Titul, on_delete=models.CASCADE, verbose_name='Титул')
     flor = models.IntegerField(verbose_name='Этаж')
+    discription = models.TextField(verbose_name='Премечание',blank=True)
 
     def __str__(self):
         return self.numberRoom

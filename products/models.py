@@ -27,7 +27,7 @@ class Firms(models.Model):
 
 
 class Models(models.Model):
-    modelName = models.CharField(max_length=50, verbose_name='Модель')
+    modelName = models.CharField(max_length=50, verbose_name='Модель', unique=True)
     firm = models.ForeignKey(Firms, models.CASCADE, verbose_name='Фирма')
 
 
