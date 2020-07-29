@@ -1,5 +1,6 @@
 from django.db import models
 
+from products.models import Models
 from status.models import Status
 
 
@@ -55,6 +56,21 @@ class Model(models.Model):
         verbose_name_plural = 'Модели'
 
 
+class PrinterModel(models.Model):
+    number = models.CharField(max_length=4, verbose_name="Номер", unique=True)
+    printer = models.ForeignKey(Models, on_delete=models.CASCADE, verbose_name='Модель принтера')
+    model = models.ForeignKey(Model, on_delete=models.CASCADE, verbose_name='Модель картриджа')
+
+
+    def __str__(self):
+        return self.number
+
+    class Meta:
+        verbose_name = 'Модель принтера'
+        verbose_name_plural = 'Модели принтеров'
+
+
+
 class Materials(models.Model):
     serialNumber = models.CharField(max_length=30, verbose_name='Серийный номер')
     model = models.ForeignKey(Model, on_delete=models.CASCADE, verbose_name='Модель')
@@ -68,3 +84,6 @@ class Materials(models.Model):
     class Meta:
         verbose_name = 'Расходный материал'
         verbose_name_plural = 'Расходные материалы'
+
+
+
