@@ -55,9 +55,6 @@ class Model(models.Model):
         verbose_name_plural = 'Модели'
 
 
-
-
-
 class Materials(models.Model):
     serialNumber = models.CharField(max_length=30, verbose_name='Серийный номер')
     model = models.ForeignKey(Model, on_delete=models.CASCADE, verbose_name='Модель')
