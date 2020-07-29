@@ -17,7 +17,7 @@ class ModelAdmin(admin.ModelAdmin):
 
 @admin.register(Products)
 class ModelAdmin(admin.ModelAdmin):
-    list_display = ['serialNumber','modelProduct', 'category', 'location']
+    list_display = ['serialNumber','modelProduct', 'category', 'location','status','ip']
 
 
 @admin.register(Arm)

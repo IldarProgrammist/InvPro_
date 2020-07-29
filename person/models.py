@@ -11,7 +11,6 @@ class Position(models.Model):
         verbose_name_plural = 'Должности'
 
 
-
 class Department(models.Model):
     depName = models.CharField(max_length=50, verbose_name='Название отдела')
 
@@ -24,6 +23,20 @@ class Department(models.Model):
 
 
 
+
+
+class Organization(models.Model):
+    name = models.CharField(max_length=100, verbose_name='Название организации')
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Организация'
+        verbose_name_plural = 'Организации'
+
+
+
 class Person(models.Model):
     firstName = models.CharField(max_length=20, verbose_name='Фамилия')
     lastName = models.CharField(max_length=20, verbose_name='Имя')
@@ -33,6 +46,7 @@ class Person(models.Model):
     depatName = models.ForeignKey(Department, models.CASCADE, verbose_name='Отдел')
     position = models.ForeignKey(Position,    models.CASCADE, verbose_name='Должность')
     email = models.EmailField(verbose_name='Электронная почта', blank=True)
+    organization = models.ForeignKey(Organization, verbose_name='Организация', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.firstName
@@ -40,3 +54,4 @@ class Person(models.Model):
     class Meta:
         verbose_name = 'Сотрудник'
         verbose_name_plural = 'Сотрудники'
+

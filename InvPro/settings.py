@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'person',
     'products',
     'location',
+    'status',
 
 ]
 
