@@ -19,4 +19,4 @@ class ModelAdmin(admin.ModelAdmin):
 
 @admin.register(Materials)
 class MaterialsAdmin(admin.ModelAdmin):
-    list_display = ('serialNumber','model','category')
+    list_display = ('serialNumber','model','category','status')

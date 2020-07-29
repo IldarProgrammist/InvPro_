@@ -1,5 +1,7 @@
 from django.db import models
 
+from status.models import Status
+
 
 class Firm(models.Model):
     name = models.CharField(max_length=50, verbose_name='Фирма')
@@ -38,8 +40,6 @@ class CategoryMaterial(models.Model):
 
 
 
-
-
 class Model(models.Model):
     name = models.CharField(max_length=50, verbose_name='Модель')
     firm = models.ForeignKey(Firm, on_delete=models.CASCADE, verbose_name='Производитель')
@@ -59,6 +59,7 @@ class Materials(models.Model):
     serialNumber = models.CharField(max_length=30, verbose_name='Серийный номер')
     model = models.ForeignKey(Model, on_delete=models.CASCADE, verbose_name='Модель')
     category = models.ForeignKey(CategoryMaterial, on_delete=models.CASCADE, verbose_name='Категория')
+    status = models.ForeignKey(Status, on_delete=models.CASCADE, verbose_name='Статус')
 
     def __str__(self):
         return self.serialNumber
