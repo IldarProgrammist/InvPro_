@@ -17,7 +17,6 @@
   <component name="ChangeListManager">
     <list default="true" id="26545484-2ec6-4856-a768-8b565567f23e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InvPro/settings.py" afterPath="$PROJECT_DIR$/InvPro/settings.py" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -405,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596006216776</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="создание приложения act">
+      <created>1596011281393</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1596011281409</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView">
@@ -480,7 +486,8 @@
     <MESSAGE value="Реконструкция модели Location" />
     <MESSAGE value="Добавление приложения expendableMaterials(расходные материалы)" />
     <MESSAGE value="добавление статуса для exMaterials" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавление статуса для exMaterials" />
+    <MESSAGE value="создание приложения act" />
+    <option name="LAST_COMMIT_MESSAGE" value="создание приложения act" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
