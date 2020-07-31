@@ -1,47 +1,40 @@
-{% extends 'base.html' %}
-{% load static %}
+ {% extends 'base.html' %}
+ {% load static %}
 
-<div class="wraper">
-   {% block  header%}
-        {% include 'header.html' %}
-    {% endblock %}
 
-    {{% block content %}
-    <div class="container">
+ {% block header %}
+      {% include 'header.html' %}
+ {% endblock %}
 
-    <div class="row">
 
-        <div class="col-6"><h3 class="header_contct">Информация о сотрудниках</h3></div>
-    </div>
+    {% block content %}
+      <div class="container">
+        <div class="row">
+            <div class="col-2"><h1 class="title-person">Пользователи</h1></div>
+                <div class="col-6"></div>
+        </div>
+      </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-12">
+                        <form class="form-inline" action="{% url 'contacts' %}">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+            <div class="table-wrap">
 
 
             <div class="row">
-
-                    <div class="container">
-                          <div class="row">
-                            <div class="col"></div>
-                            <div class="col"></div>
-
-                              <div class="col">
-                                     <div class="search">
-
-                                         <form class="form-inline" action="{% url 'contacts' %}">
-                                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
-                                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                                         </form>
-
-                                     </div>
-                             </div>
-                          </div>
-                    </div>
-            </div>
-
-
-
-    <div class="row">
         <div class="col">
         </div>
-        <div class="col-12">
+        <div class="col-10">
             <table class="table table-hover table-inverse">
                   <thead>
                     <tr>
@@ -74,8 +67,7 @@
         <div class="col">
         </div>
       </div>
-    </div>
-    </div>
+            </div>
 
         <nav aria-label="...">
               <ul class="pagination">
@@ -94,16 +86,12 @@
                       {% endif %}
                   {% endfor %}
 
-
               </ul>
-
         </nav>
 
     {% endblock %}
+ {% block footer %}
+     {% include 'footer.html' %}
 
+ {% endblock %}
 
-        {% block footer %}
-            {% include 'footer.html' %}
-        {% endblock %}
-
-</div>

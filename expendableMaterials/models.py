@@ -17,7 +17,7 @@ class Firm(models.Model):
 
 
 class Color(models.Model):
-    name = models.CharField(max_length=30, verbose_name='Цвет')
+    name = models.CharField(max_length=30, verbose_name='Цвет', unique=True)
     word = models.CharField(max_length=1, verbose_name='Обозначение')
 
     def __str__(self):
@@ -42,7 +42,7 @@ class CategoryMaterial(models.Model):
 
 
 class Model(models.Model):
-    name = models.CharField(max_length=50, verbose_name='Модель')
+    name = models.CharField(max_length=50, verbose_name='Модель', unique=True)
     firm = models.ForeignKey(Firm, on_delete=models.CASCADE, verbose_name='Производитель')
     color = models.ForeignKey(Color, on_delete=models.CASCADE, verbose_name='Цвет', blank=True)
     img = models.ImageField(verbose_name='фото модели', blank=True)
@@ -72,7 +72,7 @@ class PrinterModel(models.Model):
 
 
 class Materials(models.Model):
-    serialNumber = models.CharField(max_length=30, verbose_name='Серийный номер')
+    serialNumber = models.CharField(max_length=30, verbose_name='Серийный номер', unique=True)
     model = models.ForeignKey(Model, on_delete=models.CASCADE, verbose_name='Модель')
     category = models.ForeignKey(CategoryMaterial, on_delete=models.CASCADE, verbose_name='Категория')
     status = models.ForeignKey(Status, on_delete=models.CASCADE, verbose_name='Статус')

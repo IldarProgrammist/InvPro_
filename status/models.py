@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Status(models.Model):
-    name = models.CharField(max_length=30, verbose_name='Название статуса')
+    name = models.CharField(max_length=30, verbose_name='Название статуса',unique=True)
     img = models.ImageField(verbose_name='Картинка статуса', blank=True)
 
     def __str__(self):

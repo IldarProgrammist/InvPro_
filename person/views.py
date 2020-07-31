@@ -34,7 +34,7 @@ def contactView(request):
       }
 
 
-   return render(request, 'person/contct.html', context =context)
+   return render(request, 'person/person.html', context =context)
 
 
 

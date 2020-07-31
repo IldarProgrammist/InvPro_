@@ -1,3 +1,10 @@
 from django.shortcuts import render
 
-# Create your views here.
+from act.models import Act, Application, Extradition
+
+
+def ListActView(request):
+
+   extradition =Extradition.objects.all()
+
+   return render(request, 'act/listAct.html', {'extradition':extradition})

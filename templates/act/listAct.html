@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<div class="wraper">
+   {% block  header%}
+        {% include 'header.html' %}
+    {% endblock %}
+
+    {{% block content %}
+                   {% for ex in extradition%}
+                        {{ ex.person.firstName }}
+                        {{ ex.person.lastName }}
+                        {{ ex.person.fatherName }}
+                        {{ ex.serialNumberProduct }}
+                        {{ ex.serialNumberProduct.category.nameType }}
+
+                    {% endfor %}
+    {% endblock %}
+</div>

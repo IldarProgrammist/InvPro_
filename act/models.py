@@ -1,11 +1,12 @@
 from django.db import models
+from os import uname_result
 
 from person.models import Person
 from products.models import Category, Products
 
 
 class Application(models.Model):
-    number = models.CharField(max_length=30, verbose_name='Номер заявки')
+    number = models.CharField(max_length=30, verbose_name='Номер заявки', unique=True)
     fistsName = models.ForeignKey(Person,verbose_name='Пользователь', on_delete=models.CASCADE)
     discription = models.TextField(verbose_name='Описание заявки')
     date_created = models.DateField(verbose_name='Дата создания', auto_now_add=True)
@@ -19,7 +20,7 @@ class Application(models.Model):
 
 
 class Act(models.Model):
-    numberAct = models.CharField(max_length=20, verbose_name='Номер акта')
+    numberAct = models.CharField(max_length=20, verbose_name='Номер акта', unique=True)
     namberApplication = models.ForeignKey(Application, on_delete=models.CASCADE, verbose_name='Заявка')
     scan = models.ImageField(verbose_name='Скан подписанного акта', blank=True)
 

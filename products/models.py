@@ -40,7 +40,7 @@ class Models(models.Model):
 
 
 class Products(models.Model):
-    serialNumber = models.CharField(max_length=40, verbose_name='Серийный номер')
+    serialNumber = models.CharField(max_length=40, verbose_name='Серийный номер', unique=True)
     modelProduct = models.ForeignKey( Models, on_delete=models.CASCADE, verbose_name='Модель')
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория оборудования')
     ip = models.CharField(max_length=20, verbose_name='Ip-адрес', blank=True)
