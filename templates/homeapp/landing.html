@@ -1,19 +1,66 @@
 {% extends 'base.html' %}
 {% load static %}
 
-<div class="wraper">
    {% block  header%}
         {% include 'header.html' %}
+
     {% endblock %}
 
 
     {% block content %}
 
+        <div class="wrap-contntent">
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <img class="img_main_icon" src="{% static 'img/per.png' %}">
+                            <h4 class="card-h"> <a class="a_card" href="#">Пользователи</a></h4>
+                    </div>
+                </div>
+                    <div class="col">
+                        <div class="card">
+                           <img class="img_main_icon" src="{% static 'img/pc_.png' %}">
+                             <h4 class="card-h"> <a class="a_card" href="#">Рабочее место</a></h4>
+                        </div>
+                    </div>
+                        <div class="col">
+                           <div class="col">
+                                <div class="card">
+                                    <img class="img_main_icon" src="{% static 'img/print.png' %}">
+                                    <h4 class="card-h"> <a class="a_card" href="#">Печатное устройство</a></h4>
+                                </div>
+                    </div>
+                        </div>
+            </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
     {% endblock %}
 
 
-        {% block footer %}
-
-        {% endblock %}
-
-</div>
+    {% block footer %}
+         {% include 'footer.html' %}
+    {% endblock %}

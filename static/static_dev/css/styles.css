@@ -18,3 +18,66 @@
 
     margin: 30px;
 }
+.pagination{
+    /*margin: 10px;*/
+    justify-content: center;
+}
+
+
+
+.copy-av{
+    color: #1b1e21;
+    font-size:10px;
+    color: #dee2e6;
+    padding: 10px;
+}
+
+.footer-wraper{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.nav-footer{
+    background-color: #1b1e21;
+    height: 60px;
+}
+
+.wrap-contntent{
+    margin: 70px;
+}
+
+.card-body{
+    text-align: center;
+}
+
+.card-link{
+
+}
+.card{
+    width: 350px;
+    height: 350px;
+    border: #1b1e21 solid;
+}
+
+.card:hover{
+    border: #34ce57 solid;
+}
+
+.img_main_icon{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+
+.card-h{
+margin: auto;
+}
+.a_card{
+    color: black;
+    text-decoration: none;
+}
+.a_card:hover{
+   color: #34ce57;
+    text-decoration: none;
+
+}
