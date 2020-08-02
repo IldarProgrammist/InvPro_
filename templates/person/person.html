@@ -19,10 +19,11 @@
             <div class="row">
                 <div class="col-2"></div>
                 <div class="col-12">
-                        <form class="form-inline" action="{% url 'contacts' %}">
+
+                        <form class="form-inline" {% url 'person' %}  >
                             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
+                        </form>
 
                 </div>
             </div>
@@ -49,7 +50,7 @@
                     </tr>
                   </thead>
 
-                    {% for person in persons.object_list %}
+                    {% for person in persons %}
                       <tbody>
                         <tr>
                             <td> {{ person.firstName }}</td>
@@ -69,33 +70,11 @@
       </div>
             </div>
 
+        {% include 'pagination.html' with page=page_obj %}
+
     {% endblock %}
 
 
-
- {% block paginator %}
-
-        <nav aria-label="...">
-              <ul class="pagination">
-                  {% for n in persons.paginator.page_range %}
-
-                      {% if persons.number == n  %}
-                            <li class="page-item active">
-                                <a class="page-link" href="?page={{ n }}">{{ n }} <span class="sr-only">(current)</span></a>
-                            </li>
-
-                      {% elif n >  persons.number|add:-3 and n < persons.number|add:3  %}
-                             <li class="page-item">
-                                 <a class="page-link" href="?page={{ n }}">{{ n }}</a>
-                             </li>
-
-                      {% endif %}
-                  {% endfor %}
-
-              </ul>
-        </nav>
-
-{% endblock %}
 
 
 
