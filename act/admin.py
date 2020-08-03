@@ -5,7 +5,7 @@ from act.models import Application, Act, Extradition
 
 @admin.register(Application)
 class  ApplicationAdmin(admin.ModelAdmin):
-    list_display = ['number','discription','date_created','fistsName']
+    list_display = ['number','discription','date_created','fistsName','is_performed']
 
 @admin.register(Act)
 class ActAdmin(admin.ModelAdmin):

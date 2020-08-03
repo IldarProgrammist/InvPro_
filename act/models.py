@@ -1,5 +1,4 @@
 from django.db import models
-from os import uname_result
 
 from person.models import Person
 from products.models import Category, Products
@@ -10,6 +9,7 @@ class Application(models.Model):
     fistsName = models.ForeignKey(Person,verbose_name='Пользователь', on_delete=models.CASCADE)
     discription = models.TextField(verbose_name='Описание заявки')
     date_created = models.DateField(verbose_name='Дата создания', auto_now_add=True)
+    is_performed = models.BooleanField(verbose_name='Выполнена')
 
     def __str__(self):
         return self.number

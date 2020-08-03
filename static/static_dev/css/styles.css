@@ -80,3 +80,22 @@ margin: auto;
    color: #34ce57;
     text-decoration: none;
 }
+
+.title-application{
+   color: #34ce57;
+    padding-top: 25px;
+}
+
+.title-app{
+    text-align: center;
+    font-size: 18px;
+}
+.det-app{
+    text-align: center;
+}
+
+.btn-add{
+   padding-bottom: 10px;
+    padding-left: 38px;
+}
+

@@ -1,8 +1,8 @@
 from django.urls import path
+from act.views import ListActView, aplictionsListView
 
-from act.views import ListActView
-from homeapp.views import index
 
 urlpatterns = [
     path('', ListActView, name='act'),
+    path('app/', aplictionsListView, name='app')
 ]
