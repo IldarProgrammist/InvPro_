@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block  header%}
+    {% include 'header.html' %}
+    {% endblock %}
+
+    {{% block content %}
+
+          <div class="wrap-contntent">
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col">
+                    <div class="card">
+                            <img class="img_main_icon" src="{% static 'img/doc.png' %}">
+                                <h4 class="card-h"> <a class="a_card" href="#">Акты</a></h4>
+                    </div>
+                </div>
+
+
+                    <div class="col">
+                        <div class="card">
+                           <img class="img_main_icon" src="{% static 'img/eq.png' %}">
+                             <h4 class="card-h"> <a class="a_card" href="#">Оборудование</a></h4>
+                        </div>
+                    </div>
+                        <div class="col">
+                           <div class="col">
+                                <div class="card">
+                                    <img class="img_main_icon" src="{% static 'img/help.png' %}">
+                                    <h4 class="card-h"> <a class="a_card" href="#" >Заявки</a></h4>
+                                </div>
+                    </div>
+                        </div>
+            </div>
+
+            </div>
+
+        </div>
+
+        </div>
+
+    {% endblock %}
+
+    {{% block footer %}
+        {% include 'footer.html' %}
+    {% endblock %}
+
+
+

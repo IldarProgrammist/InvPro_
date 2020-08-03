@@ -1,3 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def workSpaceWiew(request):
+
+    return  render(request, 'eq/WorkSpace.html')
