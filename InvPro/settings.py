@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'location',
     'status',
     'expendableMaterials',
+    'bootstrap_pagination',
 ]
 
 MIDDLEWARE = [
