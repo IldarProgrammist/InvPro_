@@ -52,12 +52,12 @@ class Model(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = 'Модель'
-        verbose_name_plural = 'Модели'
+        verbose_name = 'Модель картриджа'
+        verbose_name_plural = 'Модели картриджей'
 
 
 class PrinterModel(models.Model):
-    number = models.CharField(max_length=4, verbose_name="Номер", unique=True)
+    number = models.CharField(max_length=50, verbose_name="Номер", unique=True)
     printer = models.ForeignKey(Models, on_delete=models.CASCADE, verbose_name='Модель принтера')
     model = models.ForeignKey(Model, on_delete=models.CASCADE, verbose_name='Модель картриджа')
 
