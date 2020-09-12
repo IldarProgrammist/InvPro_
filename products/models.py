@@ -40,12 +40,12 @@ class Models(models.Model):
 
 
 class Products(models.Model):
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория оборудования')
     serialNumber = models.CharField(max_length=40, verbose_name='Серийный номер', unique=True)
     modelProduct = models.ForeignKey( Models, on_delete=models.CASCADE, verbose_name='Модель')
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория оборудования')
     ip = models.CharField(max_length=20, verbose_name='Ip-адрес', blank=True)
     location = models.ForeignKey(Room, on_delete=models.CASCADE, verbose_name='Место расположения')
-    status = models.ForeignKey(Status, on_delete=models.CASCADE, verbose_name='Статус', blank=True)
+
     def __str__(self):
         return self.serialNumber
 

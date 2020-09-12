@@ -1,6 +1,6 @@
 from django.db import models
 
-from products.models import Models
+from products.models import Models, Category
 from status.models import Status
 
 
@@ -72,9 +72,9 @@ class PrinterModel(models.Model):
 
 
 class Materials(models.Model):
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория')
     serialNumber = models.CharField(max_length=30, verbose_name='Серийный номер', unique=True)
     model = models.ForeignKey(Model, on_delete=models.CASCADE, verbose_name='Модель')
-    category = models.ForeignKey(CategoryMaterial, on_delete=models.CASCADE, verbose_name='Категория')
     status = models.ForeignKey(Status, on_delete=models.CASCADE, verbose_name='Статус')
 
     def __str__(self):

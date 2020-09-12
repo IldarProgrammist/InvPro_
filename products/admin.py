@@ -17,7 +17,7 @@ class ModelAdmin(admin.ModelAdmin):
 
 @admin.register(Products)
 class ModelAdmin(admin.ModelAdmin):
-    list_display = ['serialNumber','modelProduct', 'category', 'location','status','ip']
+    list_display = ['serialNumber', 'category', 'modelProduct',  'location','ip']
     search_fields = ['serialNumber']
 
 
