@@ -1,7 +1,6 @@
 from django.contrib import admin
 
-from expendableMaterials.models import CategoryMaterial, Firm, Color, Model, Materials, PrinterModel
-
+from expendableMaterials.models import *
 
 @admin.register(Firm)
 class FirmAdmin(admin.ModelAdmin):
@@ -19,7 +18,7 @@ class ModelAdmin(admin.ModelAdmin):
 
 @admin.register(Materials)
 class MaterialsAdmin(admin.ModelAdmin):
-    list_display = ('serialNumber','model','category','status')
+    list_display = ('serialNumber','model','status','category', 'date_z')
 
 
 @admin.register(PrinterModel)

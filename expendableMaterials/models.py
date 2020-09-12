@@ -76,7 +76,7 @@ class Materials(models.Model):
     serialNumber = models.CharField(max_length=30, verbose_name='Серийный номер', unique=True)
     model = models.ForeignKey(Model, on_delete=models.CASCADE, verbose_name='Модель')
     status = models.ForeignKey(Status, on_delete=models.CASCADE, verbose_name='Статус')
-
+    date_z = models.DateField(verbose_name='Дата изменения')
     def __str__(self):
         return self.serialNumber
 
